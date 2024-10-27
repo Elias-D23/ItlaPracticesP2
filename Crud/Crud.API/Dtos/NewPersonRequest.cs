@@ -1,6 +1,6 @@
 ﻿namespace Crud.API.Dtos
 {
-    public class NewPersonRequet
+    public class NewPersonRequest
     {
         public int Id { get; set; }
 

@@ -17,29 +17,60 @@ namespace Crud.API.Controllers
             _context = context;
         }
 
-        [HttpGet("GetPeople")]
-        public async Task<ActionResult<List<Person>>> GetPeople()
+        [HttpGet("GetPerson")]
+        public async Task<ActionResult<List<Person>>> GetPerson()
         {
             return await _context.People.ToListAsync();
         }
 
-        [HttpPost("AddPeople")]
-        public async Task<ActionResult<List<Person>>> AddPerson(Person person)
+        [HttpPost("AddPerson")]
+        public async Task<ActionResult<List<Person>>> AddPerson(NewPersonRequest request)
         {
-           
-            //var personDb = new Person();
 
-            //personDb.Name = request.Name;
-            //personDb.LastName = request.LastName;
-            //personDb.Email = request.Email;
-            //personDb.Phone = request.Phone;
+            var personDb = new Person();
 
-            List<Person> people = new List<Person>();
-            people.Add(person);
+            personDb.Name = request.Name;
+            personDb.LastName = request.LastName;
+            personDb.Email = request.Email;
+            personDb.Phone = request.Phone;
 
-            _context.People.Add(person);
+            _context.People.Add(personDb);
             await _context.SaveChangesAsync();
-            return people;
+            return Ok(personDb);
         }
+
+        [HttpPut("UpdatePerson")]
+        public async Task<IActionResult> UpdatePerson(int id, [FromBody] NewPersonRequest request)
+        {
+            var personDb = await _context.People.FindAsync(id);
+            if (personDb == null)
+            {
+                return NotFound();
+            }
+
+            personDb.Name = request.Name;
+            personDb.LastName = request.LastName;
+            personDb.Email = request.Email;
+            personDb.Phone = request.Phone;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("DeletePerson ")]
+        public async Task<IActionResult> DeletePerson(int id)
+        {
+            var person = await _context.People.FindAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            _context.People.Remove(person);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+
     }
 }
