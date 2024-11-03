@@ -5,13 +5,9 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crud.Web", "Crud.Web\Crud.Web.csproj", "{EE197063-7B01-4F07-9C33-7A863A6A18E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.API", "Crud.API\Crud.API.csproj", "{7596C39E-B495-486E-AD58-E981C7189FB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crud.API", "Crud.API\Crud.API.csproj", "{7596C39E-B495-486E-AD58-E981C7189FB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.Domain", "Crud.Domain\Crud.Domain.csproj", "{98DE0D2B-A36A-42BC-8587-FA65F8591792}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.Infrastructure", "Crud.Infrastructure\Crud.Infrastructure.csproj", "{C4211519-A209-44D7-804B-538C3F105268}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.Application", "Crud.Application\Crud.Application.csproj", "{87AE84B7-22CF-4855-A59E-A5BAF9ED11D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crud.Domain", "Crud.Domain\Crud.Domain.csproj", "{98DE0D2B-A36A-42BC-8587-FA65F8591792}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +27,6 @@ Global
 		{98DE0D2B-A36A-42BC-8587-FA65F8591792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98DE0D2B-A36A-42BC-8587-FA65F8591792}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98DE0D2B-A36A-42BC-8587-FA65F8591792}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4211519-A209-44D7-804B-538C3F105268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4211519-A209-44D7-804B-538C3F105268}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4211519-A209-44D7-804B-538C3F105268}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4211519-A209-44D7-804B-538C3F105268}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87AE84B7-22CF-4855-A59E-A5BAF9ED11D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87AE84B7-22CF-4855-A59E-A5BAF9ED11D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87AE84B7-22CF-4855-A59E-A5BAF9ED11D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87AE84B7-22CF-4855-A59E-A5BAF9ED11D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
